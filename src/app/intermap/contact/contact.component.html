@@ -1,3 +1,59 @@
-<p>contact works!</p>
+<section class="contact">
+  <h3 class="contact__title">Contact me!</h3>
+  <form
+    [formGroup]="contactForm"
+    class="contact__form"
+    action=""
+    (ngSubmit)="onSubmit()"
+    ngNativeValidate
+  >
+    <input
+      type="text"
+      id="name"
+      name="name"
+      formControlName="name"
+      placeholder="Your name"
+      class="input"
+      pattern="[a-zA-Z]{3,30}"
+      arialabel="name of the contact page"
+      required
+    />
+    <input
+      type="text"
+      id="email"
+      name="email"
+      formControlName="email"
+      placeholder="Your email"
+      class="input"
+      arialabel="email of the contact page"
+      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+      required
+    />
 
-<p>Hey je suis le contact !!</p>
+    <input
+      type="text"
+      id="subject"
+      name="subject"
+      formControlName="subject"
+      placeholder="Your subject"
+      class="input"
+      arialabel="subject of the contact page"
+      pattern="[a-zA-Z]{3,30}"
+      required
+    />
+    <textarea
+      class="textarea"
+      name="message"
+      placeholder="Your message*"
+      id="message"
+      cols="30"
+      aria-label="message of the contact page"
+      rows="10"
+    ></textarea>
+
+    <button type="submit" class="button-contact button--disable">Send</button>
+  </form>
+  <p class="modale" [ngClass]="submit === true ? 'modale--see' : ''">
+    Message send !
+  </p>
+</section>
