@@ -60,13 +60,27 @@
         </div>
       </div>
     </div>
-    <!-- <div class="links">
-          <NavLink to="/" class={({ isActive }) => (isActive ? 'nav-link nav-link--selected' : 'nav-link')}>
+    <div class="links">
+      <!-- <NavLink to="/" class={({ isActive }) => (isActive ? 'nav-link nav-link--selected' : 'nav-link')}>
             Map
           </NavLink>
           <NavLink to="/map" class={({ isActive }) => (isActive ? 'nav-link nav-link--selected' : 'nav-link')}>
             Contact
-          </NavLink>
-        </div> -->
+          </NavLink> -->
+      <a
+        class="nav-link"
+        routerLink="/map"
+        routerLinkActive="nav-link--selected"
+      >
+        Map
+      </a>
+      <a
+        class="nav-link"
+        routerLink=""
+        routerLinkActive="nav-link--selected"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Contact</a
+      >
+    </div>
   </div>
 </div>
