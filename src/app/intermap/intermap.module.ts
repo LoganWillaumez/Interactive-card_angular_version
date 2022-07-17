@@ -5,6 +5,7 @@ import { MapComponent } from './map/map.component';
 import { ContactComponent } from './contact/contact.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 const routes: Routes = [
   { path: 'map', component: MapComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     FormsModule,
+    GoogleMapsModule,
     ReactiveFormsModule,
   ],
   exports: [IntermapComponent],

@@ -25,7 +25,7 @@ export class ContactComponent implements OnInit {
 
   onSubmit() {
     console.log(this.contactForm);
-    this.submit = true; //! check pour la modale
+    this.submit = true;
     this.contactForm.reset();
     setTimeout(() => (this.submit = false), 3000);
   }
