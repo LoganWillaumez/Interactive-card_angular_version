@@ -39,3 +39,14 @@ body {
   all: unset;
   cursor: pointer;
 }
+
+// Bad practice, I know, but it allow me to change google map style(for the menu on the left) 😅
+.gmnoprint {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 2.5rem !important;
+  @media only screen and (min-width: 800px) {
+    display: inline !important;
+  }
+}
