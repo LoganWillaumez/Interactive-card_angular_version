@@ -1,1 +1,11 @@
-<p>map works!</p>
+<div class="map">
+  <google-map
+    height="100%"
+    width="100%"
+    [zoom]="zoom"
+    [center]="center"
+    [options]="options"
+  >
+    <map-marker [position]="center" [label]="'Your position'"> </map-marker
+  ></google-map>
+</div>

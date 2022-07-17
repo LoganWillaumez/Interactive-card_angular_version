@@ -9,6 +9,7 @@ specifiers:
   '@angular/compiler-cli': ^14.0.0
   '@angular/core': ^14.0.0
   '@angular/forms': ^14.0.0
+  '@angular/google-maps': ^14.0.5
   '@angular/platform-browser': ^14.0.0
   '@angular/platform-browser-dynamic': ^14.0.0
   '@angular/router': ^14.0.0
@@ -26,6 +27,7 @@ dependencies:
   '@angular/compiler': 14.0.6_@angular+core@14.0.6
   '@angular/core': 14.0.6_rxjs@7.5.6+zone.js@0.11.6
   '@angular/forms': 14.0.6_v4xkvekty4uhy7tfslqoygdzku
+  '@angular/google-maps': 14.0.5_x3knty6l2kepgbyfk5hnwhgj3i
   '@angular/platform-browser': 14.0.6_spn3at637jkuvsqjt7uncfwzje
   '@angular/platform-browser-dynamic': 14.0.6_5qq33cwqpmskqkofsmdwscvapm
   '@angular/router': 14.0.6_v4xkvekty4uhy7tfslqoygdzku
@@ -326,6 +328,20 @@ packages:
       '@angular/common': 14.0.6_qtidce3aeekerv27wsssxbcnna
       '@angular/core': 14.0.6_rxjs@7.5.6+zone.js@0.11.6
       '@angular/platform-browser': 14.0.6_spn3at637jkuvsqjt7uncfwzje
+      rxjs: 7.5.6
+      tslib: 2.4.0
+    dev: false
+
+  /@angular/google-maps/14.0.5_x3knty6l2kepgbyfk5hnwhgj3i:
+    resolution: {integrity: sha512-wUnxT9PnQMZ+9iP98o30VrIr957IlWeflz+outA8rn9VJO27uikmmakwfFjFvGH+4Gfcs0HkHMPChWwQ4g3usg==}
+    peerDependencies:
+      '@angular/common': ^14.0.0 || ^15.0.0
+      '@angular/core': ^14.0.0 || ^15.0.0
+      rxjs: ^6.5.3 || ^7.4.0
+    dependencies:
+      '@angular/common': 14.0.6_qtidce3aeekerv27wsssxbcnna
+      '@angular/core': 14.0.6_rxjs@7.5.6+zone.js@0.11.6
+      '@types/google.maps': 3.49.2
       rxjs: 7.5.6
       tslib: 2.4.0
     dev: false
@@ -1962,6 +1978,10 @@ packages:
       '@types/qs': 6.9.7
       '@types/serve-static': 1.13.10
     dev: true
+
+  /@types/google.maps/3.49.2:
+    resolution: {integrity: sha512-ZO1qWciukqED9qcUNW7OaPXWnTlT+tO3WcYkmudZyQW2BqD7TlMFRrdqSCoqfwKhERCwBA5A/YZt/g5A3BqgLQ==}
+    dev: false
 
   /@types/http-proxy/1.17.9:
     resolution: {integrity: sha512-QsbSjA/fSk7xB+UXlCT3wHBy5ai9wOcNDWwZAtud+jXhwOM3l+EYZh8Lng4+/6n8uar0J7xILzqftJdJ/Wdfkw==}
