@@ -1,5 +1,4 @@
-<div class="burger">
-  <h5>coucou</h5>
+<div class="burger" [ngClass]="burger === true ? 'burger--open' : ''">
   <!-- <div class={`burger ${burgerOpen && 'burger--open'}`}> -->
   <!-- <NavLink to="/" class={({ isActive }) => (isActive ? 'nav-link nav-link--selected' : 'nav-link')}>
         <i class="fa-solid fa-earth-europe"></i>
@@ -7,7 +6,17 @@
       <NavLink to="/map" class={({ isActive }) => (isActive ? 'nav-link nav-link--selected' : 'nav-link')}>
         <i class="fa-solid fa-person"></i>
       </NavLink> -->
-  <!-- <button type="button" class="burger__close" onClick={() => toggleBurger()}>
-        <i class="fa-solid fa-x"></i>
-      </button> -->
+  <button type="button" class="burger__close" (click)="toggleBurger()">
+    <i class="fa-solid fa-x"></i>
+  </button>
+  <a class="nav-link" routerLink="/map" routerLinkActive="nav-link--selected">
+    <i class="fa-solid fa-earth-europe"></i
+  ></a>
+  <a
+    class="nav-link"
+    routerLink=""
+    routerLinkActive="nav-link--selected"
+    [routerLinkActiveOptions]="{ exact: true }"
+    ><i class="fa-solid fa-person"></i
+  ></a>
 </div>

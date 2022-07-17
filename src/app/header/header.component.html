@@ -30,7 +30,6 @@
           [toggleFriends]="toggleFriends"
           [userList]="userList"
         ></app-menu-friends>
-        <!-- <MenuFriends dataUser={dataUser} friendsOpen={friendsOpen} toggleFriends={toggleFriends} /> -->
       </div>
       <div class="profil__burger">
         <button
@@ -40,6 +39,10 @@
         >
           <i class="fa-solid fa-bars"></i>
         </button>
+        <app-burger-menu
+          [burger]="burger"
+          [toggleBurger]="toggleBurger"
+        ></app-burger-menu>
         <!-- <BurgerMenu burgerOpen={burgerOpen} toggleBurger={toggleBurger} /> -->
       </div>
     </section>
