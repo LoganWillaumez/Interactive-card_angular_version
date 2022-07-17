@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { IntermapService } from '../intermap/intermap.service';
-import { user } from '../intermap/user';
+import { IntermapService } from './intermap.service';
+import { user, userRequest } from './user';
+
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+  selector: 'app-intermap',
+  templateUrl: './intermap.component.html',
+  styles: [],
 })
-export class HeaderComponent implements OnInit {
+export class IntermapComponent implements OnInit {
   userList: user[] = [];
   constructor(private intermapService: IntermapService) {}
 

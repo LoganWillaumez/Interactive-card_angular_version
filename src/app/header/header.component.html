@@ -1,1 +1,60 @@
-<p>header works!</p>
+<div class="sidebar">
+  <div class="sidebar__scroll">
+    <section class="sidebar__title-container">
+      <img class="sidebar__logo" src="assets/logo.png" alt="logo of site" />
+      <h1 class="sidebar__title">Inter'Map</h1>
+    </section>
+    <section class="profil">
+      <h2 *ngIf="userList" class="profil__firstName">
+        {{ userList[0].name.first }}, {{ userList[0].dob.age }}
+      </h2>
+      <div class="profil__location">
+        <i class="profil__point fa-solid fa-location-pin"></i>
+        <p *ngIf="userList" class="profil__city">
+          {{ userList[0].location.city }}, {{ userList[0].location.country }}
+        </p>
+      </div>
+      <div *ngIf="userList" class="profil__picture">
+        <img
+          class="profil__img"
+          [src]="userList[0].picture.large"
+          alt="Picture"
+        />
+      </div>
+      <div class="profil__friends">
+        <!-- <button type="button" class="button--disable" onClick={() => toggleFriends()}>
+              <i class="fa-solid fa-user-group" ></i>
+            </button> -->
+        <!-- <MenuFriends dataUser={dataUser} friendsOpen={friendsOpen} toggleFriends={toggleFriends} /> -->
+      </div>
+      <div class="profil__burger">
+        <!-- <button type="button" class="button--disable button__burger" onClick={() => toggleBurger()}>
+              <i class="fa-solid fa-bars"></i>
+            </button> -->
+        <!-- <BurgerMenu burgerOpen={burgerOpen} toggleBurger={toggleBurger} /> -->
+      </div>
+    </section>
+    <div *ngIf="userList" class="friends">
+      <h4 class="friends__title">Friends :</h4>
+      <div class="friends__data">
+        <div *ngFor="let user of userList; index as i" class="friends__global">
+          <img
+            *ngIf="i !== 0"
+            class="friends__img"
+            [src]="user.picture.large"
+            alt="picture"
+          />
+          <p *ngIf="i !== 0" class="friends__name">{{ user.name.first }}</p>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="links">
+          <NavLink to="/" class={({ isActive }) => (isActive ? 'nav-link nav-link--selected' : 'nav-link')}>
+            Map
+          </NavLink>
+          <NavLink to="/map" class={({ isActive }) => (isActive ? 'nav-link nav-link--selected' : 'nav-link')}>
+            Contact
+          </NavLink>
+        </div> -->
+  </div>
+</div>
