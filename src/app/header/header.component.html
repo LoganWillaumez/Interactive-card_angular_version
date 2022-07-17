@@ -22,15 +22,24 @@
         />
       </div>
       <div class="profil__friends">
-        <!-- <button type="button" class="button--disable" onClick={() => toggleFriends()}>
-              <i class="fa-solid fa-user-group" ></i>
-            </button> -->
+        <button type="button" class="button--disable" (click)="toggleFriends()">
+          <i class="fa-solid fa-user-group"></i>
+        </button>
+        <app-menu-friends
+          [friends]="friends"
+          [toggleFriends]="toggleFriends"
+          [userList]="userList"
+        ></app-menu-friends>
         <!-- <MenuFriends dataUser={dataUser} friendsOpen={friendsOpen} toggleFriends={toggleFriends} /> -->
       </div>
       <div class="profil__burger">
-        <!-- <button type="button" class="button--disable button__burger" onClick={() => toggleBurger()}>
-              <i class="fa-solid fa-bars"></i>
-            </button> -->
+        <button
+          type="button"
+          class="button--disable button__burger"
+          (click)="toggleBurger()"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
         <!-- <BurgerMenu burgerOpen={burgerOpen} toggleBurger={toggleBurger} /> -->
       </div>
     </section>

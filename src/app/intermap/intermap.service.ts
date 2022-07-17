@@ -22,8 +22,4 @@ export class IntermapService {
         catchError((error) => this.handleError(error, undefined))
       );
   }
-
-  toggleBool(bool: boolean) {
-    bool = !bool;
-  }
 }
