@@ -1,27 +1,66 @@
-# TechnicalTestAngular
+# Interactive Card
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.6.
+Here is a project used with two API : 
 
-## Development server
+- (randomuser)[https://randomuser.me]
+- Google map API
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Stack
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular
+- Typescript
+- SCSS
 
-## Build
+## Install
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Prerequisites: Make sure you've installed Node.js ≥ 12
 
-## Running unit tests
+1. Install dependencies :
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+yarn
 
-## Running end-to-end tests
+# or
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+npm i 
 
-## Further help
+# or
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+pnpm i
+```
+
+2. Configure .env
+
+Uncomment elenent on the app.component and add a environment/env.ts
+
+The API of index is protected, and will be delete soon ( you can add yours in place of it)
+
+```env
+export const envSecret = {
+  production: false,
+  apiGoogle: 'YOUR_API',
+};
+
+```
+
+3. To launch locally :
+
+```bash
+yarn dev
+
+# or
+
+npm run dev
+
+#or
+
+pnpm run dev
+
+#or 
+
+ng serve
+```
+
+
+Demo : https://interactive-card-angular-version.vercel.app
